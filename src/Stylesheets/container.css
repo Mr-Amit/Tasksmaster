@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Source+Sans+Pro:wght@600&display=swap');
+
+/* background: rgb(63,249,220); */
+.colors-used {
+color: #fb5b53;
+color: #f9e506;
+color: #42FBF2;
+color: rgb(63,249,220);
+}
+
+body{
+    background-color: #1d2630;
+}
+
+p.summary{
+    margin-left: 25px;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+}
+
+h6{
+    margin: 0;
+    font-weight: normal;
+    color: #a4a5a5;
+}
+
+.main-container {
+    /* z-index: 1; */
+    position: absolute;
+    top: 40vh;
+    left: 24vw;
+    width: 50%;
+    min-width: 300px;
+    height: 50vh;
+    /* background-color: rgb(230, 230, 230); */
+    background-color: #1d2630;
+
+    
+
+    display: flex;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.buttons-div{
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 200px;
+
+    text-align: center;
+    font-family: "Super Sans Pro", sans-serif;
+    justify-content: space-around;
+    /* border-color: rgb(63,249,220); */
+}
+
+.forms-div{
+    flex-grow: 3;
+    max-width: 568px;
+}
+
+.btn-1 {
+    
+    /* width: 300px; */
+    letter-spacing: 4px;
+    
+    border: none;
+    color: white;
+    background-color: #fb5b53;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f9e506;
+
+    transition: ease-out 0.3s;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.btn-1:hover{
+    box-shadow: inset 250px 0 0 0 #f9e506;
+    cursor: pointer;
+    color: #000;
+}
+
+.btn-1:focus, .btn-2:focus, .btn-2:focus::after{
+  outline: none;
+}
+
+.btn-2{
+    letter-spacing: 4px;
+
+    border: none;
+    color: white;
+    border-radius: 4px;
+
+    transition: ease-out 0.3s;
+    font-size: 0.9rem;
+    outline: none;
+    /* border: 3px solid #42FBF2; */
+    position: relative;
+    z-index: 1;
+    background-color: #23363b;
+
+}
+
+.btn-2:hover{
+    color: #fff;
+    cursor: pointer;
+}
+/* Put top, left, right = -1px to fill */
+
+.btn-2:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #42FBF2;
+}
+
+.btn-2:hover:before{
+    transition: 0.5s all ease;
+    left: 0px;
+    right: 0px;
+    opacity: 1;
+    z-index: -1;
+}
+
+
+.btn-2{
+    border: 3px solid #42FBF2;
+    border-right: none;
+}
+.btn-2:before{
+    top: -1px;
+    bottom: -1px;
+}
+.btn-2:hover:before{
+    left: -1px;
+    right: -1px;
+}
+
+
+.forms-div{
+    border-radius: 4px;
+    border-width: 3px;  
+    border-style: solid;
+    border-color: aquamarine;
+    /* border-left: none; */
+    border-left: 4px solid rgba(100, 100, 100, 0.342);
+}
+
+.btn-1, .btn-2{
+    height: 50px;
+}
+
+.form-title{
+    /* margin: auto; */
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.whole-form {
+    position: relative;
+    top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 33% 67%;
+}
+
+.form-fields{
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px;
+
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.form-fields:nth-child(1), .form-fields:nth-child(2){
+    margin-top: 2px;
+}
+
+input[id=price]{
+    width: 50%;
+    max-width: 150px;
+    max-height: 3em;
+    margin-top: 25px;
+    /* margin-top: 20px; */
+}
+
+input[type=text] {
+    border: 3px solid #42FBF2;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #fb5b53;
+}
+
+.submit-button{
+    margin-top: 16px;
+    margin-left: 40%;
+    grid-column: 2;
+    width: 45%;
+    background-color: #42FBF2;
+    color: #000;
+}
+
+.submit-button:hover{
+    box-shadow: inset 250px 0 0 0 #fb5b53;
+    cursor: pointer;
+    color: #fff;
+}
+
+input.news-wordlimit{
+    
+    width: 50%;
+    padding: 2px;
+}
+
+.news-h6{
+    font-size: 0.8em;
+    color: #a4a5a5;
+}
+
+.zodiac-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin:auto
+    /* flex: 1 0 calc(25% - 10px); */
+}
+
+.zodiac-signs{
+    background-color: #23363b;
+    color: #fff;
+    font-size: 3em;
+    margin: 8px 8px 8px 8px;
+    width: calc(100% * (1/4) - 15px - 1px);
+    border: 2px solid #42FBF2;
+    border-radius: 20%;
+}
+
+.zodiac-signs:hover{
+    color: #fb5b53;
+}
+
+.zodiac-signs:focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    box-shadow: none;
+    background-color: #42FBF2;
+    color: #1d2630;
+}
+
+.space-div{
+    max-width: 485px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.two-buttons{
+    margin-left: 25px;
+}
+
+.nasa-icon{
+    width: 3.5em;
+}
+.nasa-title{
+    display: flex;
+    width: 40%;
+    align-self: center;
+}
+.space-div{
+    text-align: left;
+}
+
+/* 
+<div className="nasa-title">
+                    <div className="form-title">
+                        Space by 
+                    </div>
+                    <img className="nasa-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" 
+                        alt="Nasa-Icon"/>
+                </div>
+*/
