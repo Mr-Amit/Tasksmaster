@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+import SubmitModal from './SubmitModal';
+
+
 function NasaForm() {
     const [openModal, setModal] = useState(false);
     return ( 
@@ -18,9 +21,9 @@ function NasaForm() {
 
             <div className="two-buttons">
                 <button className="btn-1">Preview</button>
-                <button className="btn-2 submit-button">Subscribe</button>
+                <button className="btn-2 submit-button" onClick={() => setModal(true)} >Subscribe</button>
             </div>
-
+            {openModal && <SubmitModal setModal={setModal}/>} 
         </div>
         
 

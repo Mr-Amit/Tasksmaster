@@ -31,7 +31,9 @@ function NewsForm() {
                 </div>
                 <input type="submit" className="btn-1 submit-button" onClick={() => setModal(true)} name="submit" value="SUBSCRIBE"/>    
             </form>
-            {openModal && <SubmitModal />}            
+
+            {openModal && <SubmitModal setModal={setModal}/>} 
+                       
         </div>
     );
 }

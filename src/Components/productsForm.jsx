@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
+
+import SubmitModal from './SubmitModal';
 // import './new-slider.css';
 // import ScriptTag from 'react-script-tag';
 
 
 function ProductsForm() {
+
+    const [openModal, setModal] = useState(false);
 
     useEffect(() => {
         const settings = {
@@ -77,10 +81,10 @@ function ProductsForm() {
                 <span className="range-slider__value">50</span>
                 </div>
                 
-                <input type="submit" className="btn-1 submit-button" name="submit" value="SUBMIT"/>
+                <input type="submit" className="btn-1 submit-button" onClick={() => setModal(true)} name="submit" value="SUBMIT"/>
                 {/* <ScriptTag src='slider.js'/> */}
             </form>
-        
+            {openModal && <SubmitModal setModal={setModal}/>}  
         </div>
     );
 }
