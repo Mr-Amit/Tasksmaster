@@ -18,9 +18,9 @@ class MainApp extends React.Component {
                     <img className="logo" src={logo} alt="logo"/>
                     <nav>
                     <ul className="nav__links">
-                        <li className="list-links"><a href="#">Services</a></li>
-                        <li className="list-links"><a href="#">Projects</a></li>
-                        <li className="list-links"><a href="#">About</a></li>
+                        <li className="list-links"><a href="https://wlo.link/@amitK">Willow</a></li>
+                        <li className="list-links"><a href="https://github.com/Mr-Amit/Tasksmaster">In Github</a></li>
+                        <li className="list-links"><a href="https://mr-amit.github.io/">About</a></li>
                     </ul>
                     </nav>
                     <a className="cta" href="#"><button>Contact</button></a>
