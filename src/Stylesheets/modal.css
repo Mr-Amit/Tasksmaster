@@ -42,7 +42,13 @@
 .header-button{
     float: right;
 }
-
+.span-modal{
+    font-weight: 'bold';
+    color: 'red';
+    float: 'right';
+    /* margin-top: 2px; */
+    margin-left: 2%;
+}
 .dw-div {
     display: flex;
     /* min-height: 100vh; */
