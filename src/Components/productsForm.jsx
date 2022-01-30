@@ -8,8 +8,11 @@ import SubmitModal from './SubmitModal';
 function ProductsForm() {
 
     const [openModal, setModal] = useState(false);
-
+    const [sendData, setData] = useState({"type":"ProductsForm"})
     useEffect(() => {
+        // LOOOOOOOOOOOOOOOOOK HEREEEEEEEEEEEEE
+        setModal(true)
+        
         const settings = {
             fill: "#42FBF2",
             background: "#2c3e50"
@@ -82,9 +85,9 @@ function ProductsForm() {
                 </div>
                 
                 <input type="submit" className="btn-1 submit-button" onClick={() => setModal(true)} name="submit" value="SUBMIT"/>
-                {/* <ScriptTag src='slider.js'/> */}
+                
             </form>
-            {openModal && <SubmitModal setModal={setModal}/>}  
+            {openModal && <SubmitModal setModal={setModal} data={sendData}/>}  
         </div>
     );
 }

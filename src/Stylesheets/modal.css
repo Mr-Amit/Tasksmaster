@@ -14,6 +14,31 @@
     flex-direction: column; */
 }
 
+.modal-title{
+    font-size: 2em;
+    flex-grow: 1;
+}
+
+.modal-fields{
+    font-size: 1.5em;
+    
+}
+.modal-flex{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-content: space-around;
+    /* background-color: #e8f5f7; */
+}
+
+.modal-email-submit{
+    flex-grow: 1;
+}
+
+.modal-submit{
+    max-width: 20%;
+}
+
 .header-button{
     float: right;
 }

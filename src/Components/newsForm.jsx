@@ -6,7 +6,7 @@ function NewsForm() {
 
     const [openModal, setModal] = useState(false);
     const [newsAbout, setAbout] = useState('');
-    const [wordLimit, setWordLimit] = useState(100);
+    const [wordLimit, setWordLimit] = useState(NaN);
     const [sendData, setData] = useState({})
 
     const onSubmit = (event) => {
