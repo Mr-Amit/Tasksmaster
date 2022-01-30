@@ -5,6 +5,8 @@ import SubmitModal from './SubmitModal';
 
 function NasaForm() {
     const [openModal, setModal] = useState(false);
+    const [sendData, setData] = useState({"type" : "NasaForm"})
+    
     return ( 
 
         <div className="space-div">
@@ -20,10 +22,13 @@ function NasaForm() {
             <p className="summary"> Nasa provides a beautiful picture from space, with a short piece of literature</p>
 
             <div className="two-buttons">
+            <a href="https://nasapreview.htmlsave.net/" target="_blank">
                 <button className="btn-1">Preview</button>
+            </a>
+                
                 <button className="btn-2 submit-button" onClick={() => setModal(true)} >Subscribe</button>
             </div>
-            {openModal && <SubmitModal setModal={setModal}/>} 
+            {openModal && <SubmitModal setModal={setModal} data={sendData}/>} 
         </div>
         
 

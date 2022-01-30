@@ -5,12 +5,31 @@ import SubmitModal from './SubmitModal';
 function NewsForm() {
 
     const [openModal, setModal] = useState(false);
+    const [newsAbout, setAbout] = useState('');
+    const [wordLimit, setWordLimit] = useState(100);
+    const [sendData, setData] = useState({})
 
     const onSubmit = (event) => {
         event.preventDefault();
         // console.log("event");
+        // console.log(newsAbout, wordLimit);
+
+        let obj = {
+            "type": "NewsForm",
+            "about": newsAbout,
+            "wordLimit": wordLimit
+        }
+        setData(obj)
+
     }
- 
+
+    const handleAboutChange = event => {
+        setAbout(event.target.value)
+    };
+    const handleLimitChange = event => {
+        setWordLimit(event.target.value)
+    };
+
     return ( 
         
         
@@ -20,19 +39,19 @@ function NewsForm() {
             <form className="whole-form"  onSubmit={onSubmit}>
                 <h2>About</h2>
                 <div>
-                <input className="form-fields" type="text" id="about" name="about"/>
-                <h6 className='news-h6'>If multiple things, seperate each with a comma.</h6>
+                    <input onChange={handleAboutChange} className="form-fields" type="text" id="about" name="about"/>
+                    <h6 className='news-h6'>If multiple things, seperate each with a comma.</h6>
                 </div>
                 <label className="form-fields" htmlFor="wordlimit">Word Limit</label>
 
                 <div>
-                <input className="form-fields news-wordlimit" type="text" id="wordlimit" name="wordlimit"/>
-                <h6>Insert new word limit else leave empty</h6>
+                    <input onChange={handleLimitChange} className="form-fields news-wordlimit" type="text" id="wordlimit" name="wordlimit"/>
+                    <h6>Insert new word limit else leave empty</h6>
                 </div>
                 <input type="submit" className="btn-1 submit-button" onClick={() => setModal(true)} name="submit" value="SUBSCRIBE"/>    
             </form>
 
-            {openModal && <SubmitModal setModal={setModal}/>} 
+            {openModal && <SubmitModal setModal={setModal} data={sendData}/>} 
                        
         </div>
     );

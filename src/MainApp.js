@@ -23,7 +23,7 @@ class MainApp extends React.Component {
                         <li className="list-links"><a href="https://mr-amit.github.io/">About</a></li>
                     </ul>
                     </nav>
-                    <a className="cta" href="#"><button>Contact</button></a>
+                    <a className="cta" href="https://www.linkedin.com/in/amit-kumar-930214192/"><button>Contact</button></a>
                     
                 </header>
 
