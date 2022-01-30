@@ -22,7 +22,7 @@ function NasaForm() {
             <p className="summary"> Nasa provides a beautiful picture from space, with a short piece of literature</p>
 
             <div className="two-buttons">
-            <a href="https://nasapreview.htmlsave.net/" target="_blank">
+            <a href="https://mr-amit.github.io/NasaPreview" target="_blank">
                 <button className="btn-1">Preview</button>
             </a>
                 

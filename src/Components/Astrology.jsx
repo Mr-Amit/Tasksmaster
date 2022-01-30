@@ -5,7 +5,7 @@ function AstrologyForm() {
     const [openModal, setModal] = useState(false);
     const [sendData, setData] = useState({})
     function openingModal(){
-        setTimeout(() => setModal(true), 2000)
+        setTimeout(() => setModal(true), 1400)
         
     }
 
